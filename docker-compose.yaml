@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    container_name: postgres-nats
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nest-nats
+    env_file:
+      - .env
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
+    volumes:
+      - ./src:/app/src
