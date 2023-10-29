@@ -1,8 +1,7 @@
 # compiled output
 /dist
 /node_modules
-/pgdata/Users/alex/Documents/GitHub/nest-type/Dockerfile /Users/alex/Documents/GitHub/nest-type/docker-compose.yaml/Users/alex/Documents/GitHub/nest-type/Dockerfile /Users/alex/Documents/GitHub/nest-type/docker-compose.yaml/Users/alex/Documents/GitHub/nest-type/Dockerfile /Users/alex/Documents/GitHub/nest-type/docker-compose.yaml/Users/alex/Documents/GitHub/nest-type/Dockerfile/Users/alex/Documents/GitHub/nest-type/Dockerfile
-
+/pgdata
 # Logs
 logs
 *.log
