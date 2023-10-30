@@ -16,7 +16,7 @@ export class AppService {
   ) {}
 
   async onModuleInit() {
-    //  await this.getEvents();
+    await this.getEvents();
   }
 
   /*Я начал делать тестовое вечером 27.10 - подлючился к серверу, посмотрел как все работает,
@@ -58,6 +58,7 @@ export class AppService {
               name: studentData.name,
               lastName: studentData.lastName,
             };
+
             this.studentService.addStudent(student);
           })
           .catch((err) => {

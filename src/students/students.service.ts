@@ -24,9 +24,9 @@ export class StudentsService {
   }
 
   async addStudent(student: CreateStudentDto): Promise<Student> {
-    const currentStudent = await this.findStudentById(student.studentId);
-    if (currentStudent) {
-      throw new ConflictException('Student with this ID already exists.');
+    const existingStudent = await this.findStudentById(student.studentId);
+    if (existingStudent) {
+      return existingStudent;
     }
     return await this.studentModel.create(student);
   }
